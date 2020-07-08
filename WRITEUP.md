@@ -26,7 +26,7 @@ python /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model 
 ```
 
 ## Explaining Custom Layers
-The app will not function correctly or may not able to function at all if there is unsupported layer that's not handle correctly.
+The app will not function correctly or may not able to function at all if there is an unsupported layer that's not handled correctly.
 The Model Optimizer will automatically classify any layer that is not in this [Supported Framework Layers List](https://docs.openvinotoolkit.org/2019_R3/_docs_MO_DG_prepare_model_Supported_Frameworks_Layers.html) as a custom layer. 
 The process behind converting custom layers involves three steps, Generate, Edit, and Specify.
 1) Generate the custom Layer Template Files by using the Model Extension
@@ -51,12 +51,12 @@ were below:
 
 Some of the potential use cases of the people counter app are
 - Store capacity checker - save labor cost and safer for workers during this COV-19 situations
-- Classroom attendants checker - validate the number of people to prevent fake attedants
+- Classroom attendants checker - validate the number of people to prevent fake attendants
 - Home security camera - notify for unusual show up in specific time range
 
 ## Assess Effects on End User Needs
 
 Lighting, model accuracy, and camera focal length/image size have different effects on a
-deployed edge model. The potential effects of each of these are as
-- the room should has a normal lighting, not too bring or too dark, since this doesn't have a nightview camera. So it might fail if too dark or too bright that couldn't show the human shape.
-- try to avoid width angle lens since it might got distortion on the edge. So it might not able to recongnize that's a person.
+deployed edge model. The potential effects of each of these are
+- the room should have normal lighting, not too bright or too dark since this doesn't have a night view camera. So it might fail if too dark or too bright that couldn't show the human shape.
+- try to avoid wide-angle lens since it might get distortion on the edge. So it might not able to recognize that's a person.
